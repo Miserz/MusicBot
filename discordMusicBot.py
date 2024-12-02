@@ -6,7 +6,6 @@ import urllib.parse
 import urllib.request
 from discord.ext import commands
 from discord import app_commands
-from dotenv import load_dotenv
 from bs4 import BeautifulSoup
 import yt_dlp
 import requests
@@ -201,8 +200,7 @@ class MusicCog(commands.Cog):
 
 
 def main():
-    load_dotenv()
-    token = os.getenv("DISCORD_TOKEN")
+    token = "MTMxMjg4MTE5OTI1Mjc3MDgzNg.GFJB5g.G3AXrFULKEW_nBXzJOzk9n0KpMa38fhEzIeh50"
     intents = discord.Intents.all()
     bot = MusicBot(command_prefix=".", intents=intents)
     bot.run(token)
